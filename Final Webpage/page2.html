@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    #myImage {
+      filter: brightness(100%);
+      transition: filter 1s ease-in-out;
+    }
+
+    #myImage.darkened {
+      filter: brightness(50%);
+    }
+    #myImage2 {
+      filter: brightness(100%);
+      transition: filter 1s ease-in-out;
+    }
+
+    #myImage2.darkened {
+      filter: brightness(50%);
+    }
+    #myImage3 {
+      filter: brightness(100%);
+      transition: filter 1s ease-in-out;
+    }
+
+    #myImage3.darkened {
+      filter: brightness(50%);
+    }
+    body {
+      background-color: #f2f2f2;
+      transition: background-color 1s ease-in-out;
+    }
+    header{
+      background-image: url("Images/Header.jpg");
+    }
+  </style>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome To My Photo Libary</h1>
+      <div>
+        <ul class="Ciao">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="page2.html">Flower Photos</a></li>
+            <li><a href="page3.html">Dog Photos</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <h2 id="text">Flowers</h2>
+      <p id="text2">by John Bacho</p>
+      <div>
+        <button id= "button" onclick="darkmode()">Dark Mode</button>
+        <script>
+          function darkmode() {
+            var image = document.getElementById("myImage");
+            var image2 = document.getElementById("myImage2");
+            var image3 = document.getElementById("myImage3");
+            var isDarkened = image.classList.contains("darkened");
+            var isDarkened = image2.classList.contains("darkened");
+            var isDarkened = image3.classList.contains("darkened");
+
+            if (isDarkened) {
+              image.classList.remove("darkened");
+              image2.classList.remove("darkened")
+              image3.classList.remove("darkened")
+              document.body.style.backgroundColor = "#f2f2f2";
+              document.getElementById('text').style.color =  "#000000";
+              document.getElementById('text2').style.color = "#000000";
+              document.getElementById('Lantana').style.color = "#000000";
+              document.getElementById('Sunflower').style.color = "#000000";
+              document.getElementById('Tulip').style.color = "#000000";
+            } else {
+              image.classList.add("darkened");
+              image2.classList.add("darkened")
+              image3.classList.add("darkened")
+              document.body.style.backgroundColor = "rgba(0, 0, 0)";
+              document.getElementById('text').style.color = "#FFFFFF";
+              document.getElementById('text2').style.color = "#FFFFFF";
+              document.getElementById('Lantana').style.color = "#FFFFFF";
+              document.getElementById('Sunflower').style.color = "#FFFFFF";
+              document.getElementById('Tulip').style.color = "#FFFFFF";
+            }
+          }
+        </script>
+        <img
+        class="image"
+        id="myImage"
+        src="Images/Flower4.jpg"
+        alt="Image of a Common Sunflower"
+      >
+      <p class="p">Common Sunflower</p>
+      <p id="Sunflower">The common sunflower is a species of large annual forb of the genus Helianthus. It is commonly grown as a crop for its edible oily seeds. Apart from cooking oil production, it is also used as livestock forage, as bird food, in some industrial applications, and as an ornamental in domestic gardens. - Wikipedia</p>
+      <img
+        class="image"
+          id="myImage2"
+          src="Images/Flower5.jpg"
+          alt="Lantana Flower"
+        >
+        <p class="p">Lantana Flower</p>
+        <p id="Lantana">Lantana camara is a species of flowering plant within the verbena family, native to the American tropics. It is a very adaptable species, which can inhabit a wide variety of ecosystems; once it has been introduced into a habitat it spreads rapidly; between 45ºN and 45ºS and more than 1,400 metres in altitude. - Wikipedia</p>
+        <img
+        class="image"
+          id="myImage3"
+          src="Images/Flower6.jpg"
+          alt="Tulip In Black And White"
+        >
+        <p class="p">Tulip In Black And White</p>
+        <p id="Tulip">Tulips are spring-blooming perennial herbaceous bulbiferous geophytes in the Tulipa genus. Their flowers are usually large, showy, and brightly coloured, generally red, orange, pink, yellow, or white. They often have a different coloured blotch at the base of the tepals, internally. - Wikipedia</p>
+      </div>
+    </main>
+
+    <footer>
+        <a href="https://www.instagram.com/john_bacho/">
+          <img class="insta" width="45" height="45" src="Images/Instagram_icon.png" alt="instagram icon">
+        </a>
+        <p id="instaname" class="insta"><a href="https://www.instagram.com/john_bacho/">@John_Bacho</a></p>
+        
+        <p id="foot">© 2023 John A. Bacho Website. All rights reserved.</p>
+      </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

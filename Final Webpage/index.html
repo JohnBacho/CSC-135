@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    #myImage {
+      filter: brightness(100%);
+      transition: filter 1s ease-in-out;
+      display: block;
+      padding-top: 10%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #myImage.darkened {
+      filter: brightness(50%);
+    }
+    #myImage2 {
+      filter: brightness(100%);
+      transition: filter 1s ease-in-out;
+    }
+
+    #myImage2.darkened {
+      filter: brightness(50%);
+    }
+    #myImage3 {
+      filter: brightness(100%);
+      transition: filter 1s ease-in-out;
+    }
+
+    #myImage3.darkened {
+      filter: brightness(50%);
+    }
+    body {
+      background-color: #f2f2f2;
+      transition: background-color 1s ease-in-out;
+    }
+    header{
+      background-image: url("Images/Header.jpg");
+    }
+  </style>
+
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome To My Photo Libary</h1>
+      <div>
+        <ul class="Ciao">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="page2.html">Flower Photos</a></li>
+          <li><a href="page3.html">Dog Photos</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <h2 id="text">About Me</h2>
+      <p id="text2">by John Bacho</p>
+      <div>
+        <button id="button" onclick="darkmode()">Dark Mode</button>
+        <script>
+          function darkmode() {
+            var image = document.getElementById("myImage");
+            var image2 = document.getElementById("myImage2");
+            var image3 = document.getElementById("myImage3");
+            var isDarkened = image.classList.contains("darkened");
+            var isDarkened = image2.classList.contains("darkened");
+            var isDarkened = image3.classList.contains("darkened");
+
+            if (isDarkened) {
+              image.classList.remove("darkened");
+              image2.classList.remove("darkened");
+              image3.classList.remove("darkened");
+              document.body.style.backgroundColor = "#f2f2f2";
+              document.getElementById("text").style.color = "#000000";
+              document.getElementById("text2").style.color = "#000000";
+              document.getElementById("paragraph").style.color = "#000000";
+            } else {
+              image.classList.add("darkened");
+              image2.classList.add("darkened");
+              image3.classList.add("darkened");
+              document.body.style.backgroundColor = "rgba(0, 0, 0)";
+              document.getElementById("text").style.color = "#FFFFFF";
+              document.getElementById("text2").style.color = "#FFFFFF";
+              document.getElementById("paragraph").style.color = "#FFFFFF";
+            }
+          }
+        </script>
+        <a href="https://www.dpreview.com/reviews/fujifilm-x-s10-review">
+          <img
+          class="Fujifilm"
+            id="myImage"
+            src="Images/camera.png"
+            alt="Image of a dog looking out to the horizon"
+          >
+        </a>
+        <p class="p">
+          The camera I use is a Fujifilm X-S10 credit "digital photography
+          review" for image
+        </p>
+        <p id="paragraph">
+          Photographs capture moments suspended in time, preserving fragments of
+          reality that might otherwise slip into oblivion. Through the lens of a
+          camera, the world transforms into a canvas of emotions, stories, and
+          raw authenticity. A photograph is more than pixels and paper; it's a
+          narrative frozen in a frame, a visual echo of an instant that
+          resonates with the past, present, and sometimes, the future. It's a
+          testament to human curiosity, creativity, and the insatiable desire to
+          encapsulate the fleeting beauty of life. Within its confines, a
+          photograph holds the power to evoke nostalgia, spark contemplation, or
+          ignite a torrent of emotions, transcending language and culture to
+          speak a universal visual language. Each photograph is a silent
+          storyteller, inviting viewers to unravel its layers, uncover its
+          mysteries, and connect intimately with the captured essence of time
+          itself.
+        </p>
+        <img
+        class="image"
+          id="myImage2"
+          src="Images/Moon.JPG"
+          alt="Image of a very cute dog"
+        >
+        <p class="p">A Photo I Took Of The Moon</p>
+        <img
+        class="image"
+          id="myImage3"
+          src="Images/Lighthouse.png"
+          alt="Image of a dog with his tongue out"
+        >
+        <p class="p">A Photo Of A Lighthouse On The Cleveland Lake Front</p>
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://www.instagram.com/john_bacho/">
+        <img
+          class="insta"
+          width="45"
+          height="45"
+          src="Images/Instagram_icon.png"
+          alt="instagram icon"
+        >
+      </a>
+      <p id="instaname" class="insta">
+        <a href="https://www.instagram.com/john_bacho/">@John_Bacho</a>
+      </p>
+
+      <p id="foot">© 2023 John A. Bacho Website. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
